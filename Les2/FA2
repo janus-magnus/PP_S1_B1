@@ -3,7 +3,6 @@ stations = ['Schagen', 'Heerhugowaard', 'Alkmaar', 'Castricum', 'Zaandam', 'Amst
 
 bStation = str(input('Wat is je beginstation?: '))
 
-
 if bStation not in stations:
     print('Dit station is niet geldig, beginstation is: Schagen')
     bStation = 'Schagen'
