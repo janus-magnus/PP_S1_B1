@@ -1,5 +1,6 @@
 stations = ['Schagen', 'Heerhugowaard', 'Alkmaar', 'Castricum', 'Zaandam', 'Amsterdam Sloterdijk', 'Amsterdam Centraal',
-            'Amsterdam Amstel', 'Utrecht Centraal', "s-Hertogenbosch", 'Eindhoven', 'Weert', 'Roermond', 'Sittard', 'Maastricht']
+            'Amsterdam Amstel', 'Utrecht Centraal', "s-Hertogenbosch", 'Eindhoven', 'Weert', 'Roermond', 'Sittard',
+            'Maastricht']
 
 bStation = str(input('Wat is je beginstation?: '))
 
@@ -29,7 +30,7 @@ print('Jij stapt in de trein op: ' + bStation)
 
 for i in range(bIndex+1,eIndex,1):
     print('-' + str(stations[i]) )
-    i+=1
+
 
 print('Jij stapt uit op: ' + eStation)
 
