@@ -1,8 +1,11 @@
+#mport re
 stations = ['Schagen', 'Heerhugowaard', 'Alkmaar', 'Castricum', 'Zaandam', 'Amsterdam Sloterdijk', 'Amsterdam Centraal',
             'Amsterdam Amstel', 'Utrecht Centraal', "s-Hertogenbosch", 'Eindhoven', 'Weert', 'Roermond', 'Sittard',
             'Maastricht']
 
 bStation = str(input('Wat is je beginstation?: '))
+
+#if not re.match(bStation
 
 if bStation not in stations:
     print('Dit station is niet geldig, beginstation is: Schagen')
