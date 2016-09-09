@@ -1,4 +1,4 @@
-lengte = eval(input('voer je lente in(in cm): '))test
+lengte = eval(input('voer je lente in(in cm): '))
 
 def langGenoeg(lengteCm):
     if type(lengte) == int:
