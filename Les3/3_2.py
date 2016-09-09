@@ -1,4 +1,4 @@
-gList = [1, 0, 58 , 69 ,87 ,-99]
+gList = [1, 0, 58 , 69 ,87 ,-99]test
 
 def f(getallenLijst):
     if type(getallenLijst) == list:
