@@ -1,0 +1,1 @@
+file = open('hardlopers.txt', 'w')
