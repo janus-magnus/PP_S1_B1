@@ -2,7 +2,6 @@ from pathlib import Path
 import time
 file = Path('hardlopers.txt')
 
-
 if file.is_file():
     hardloopFile = open('hardlopers.txt', 'w')
     #print('1')

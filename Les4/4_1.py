@@ -7,5 +7,4 @@ def table():
     print('F\t\tC')
     for i in tempList:
         print(str(convert(i))+'\t'+str(tempList.index(i)))
-
 table()

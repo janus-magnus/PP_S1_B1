@@ -1,8 +1,5 @@
 file = open('Kaartnummers.txt', 'r')
 
-
-
-
 def fileReader():
     lineList = []
     lineCounter = 0
