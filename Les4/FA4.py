@@ -12,9 +12,18 @@ def herzien():
     for line in ritenFile:
         ritList.append(line.strip('\n'))
 
+    print(anulList)
     for rit in ritList:
+        geannuleerd = False
         for anul in anulList:
-            if anul not in rit:
-                herzienFile.write(str(rit)+'\n')
+            if anul in stad:
+                geannuleerd = True
+
+        if not geannuleerd:
+            herzienFile.write(str(rit) + '\n')
+
+anulFile.close()
+herzienFile.close()
+ritenFile.close()
 
 herzien()

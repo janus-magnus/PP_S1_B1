@@ -9,7 +9,6 @@ def fileReader():
         lineList.append(quickList[0])
     print('Deze file telt ' + str(lineCounter) + ' regels')
 
-
     maxNum = max(lineList)
     maxLine = lineList.index(max(lineList))+1
     print('het grootste kaartnummer is: '+str(maxNum)+' en dat staat op regel '+

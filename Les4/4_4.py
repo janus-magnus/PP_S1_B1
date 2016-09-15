@@ -12,8 +12,7 @@ else:
 dateStr = time.strftime('%a %d %b %Y,')
 runTimeStr = input("voer de gelopen tijd in: ")
 nameStr = input("voer de naam in: ")
-
-writeStr = dateStr + runTimeStr + ', '+ nameStr
+writeStr = '{} - {} , {}'.format(dateStr,runTimeStr,nameStr)
 
 hardloopFile.write(writeStr)
 hardloopFile.close()
