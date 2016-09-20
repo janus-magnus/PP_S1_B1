@@ -4,7 +4,8 @@ def convert(tempC):
 
 def table():
     tempList = [-30,-20,-10,0,10,20,30,40]
-    print('F\t\tC')
+    print('{:9}{:15}'.format('F','C'))
     for i in tempList:
-        print(str(convert(i))+'\t'+str(tempList.index(i)))
+        temp = tempList.index(i)
+        print('{:5}{:5}'.format(convert(i),temp))
 table()
