@@ -11,11 +11,14 @@ def inlezen_beginpunt():
         else:
             print('Deze trein komt niet in {}'.format(beginStation))
 
-def inlezen_eindpunt():
+def inlezen_eindpunt(begin):
     while True:
         eindStation = input('Wat is je eindstation?: ')
         if eindStation in stations:
-            return  eindStation
+            if stations.index(begin) < stations.index(eindStation):
+                return  eindStation
+            else:
+                print('Het eindstation mag niet voor het beginstation staan')
         else:
             print('Deze trein komt niet in {}'.format(eindStation))
 
