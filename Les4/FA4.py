@@ -16,14 +16,14 @@ def herzien():
     for rit in ritList:
         geannuleerd = False
         for anul in anulList:
-            if anul in stad:
+            if anul in rit:
                 geannuleerd = True
 
         if not geannuleerd:
             herzienFile.write(str(rit) + '\n')
+    anulFile.close()
+    herzienFile.close()
+    ritenFile.close()
 
-anulFile.close()
-herzienFile.close()
-ritenFile.close()
 
 herzien()
