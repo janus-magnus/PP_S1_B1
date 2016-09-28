@@ -1,6 +1,5 @@
 import csv
 import random
-#['KluisNr','Kluiscode','Beschickbaar'], de headers
 
 with open('kluizen.txt','r') as kluizen:
     klReader = csv.reader(kluizen)
