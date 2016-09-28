@@ -11,17 +11,24 @@ land = stations.findall('Station/Land')
 syno = stations.findall('Station/Synoniemen/Synoniem')
 
 
-
+'''
 print('Dit zijn de codes, types en landcodes van de 4 stations:')
 for c, t, l in zip(code,type,land):
     s = '{} - {} - {}'.format(c.text,t.text,l.text)
     print(s)
+'''
 
+testStr = ''
 print('\nDit zijn alle stations met een of meer synoniemen:')
-for c, s in zip(code, syno):
-   # s = '{} - {}'.format(c.text, syno.text)
+for c, sy in zip(code, syno):
+    if sy is not None:
+        testStr = testStr+sy.text
+        s = '{} - {}'.format(c.text,  testStr)
     print(s)
 
+
+
+'''
 print('\nDit is de lange naam van elk station:')
 for c, n in zip(code,naamL):
     s = '{} - {}'.format(c.text,n.text)
@@ -36,3 +43,4 @@ print('\nDit is de korte naam van elk station:')
 for c, n in zip(code,naamK):
     s = '{} - {}'.format(c.text,n.text)
     print(s)
+'''
