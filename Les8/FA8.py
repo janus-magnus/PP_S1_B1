@@ -1,6 +1,9 @@
 from xml.etree import ElementTree
+import xmltodict
 
 stations = ElementTree.parse('Stations.xml')
+
+
 
 code = stations.findall('Station/Code')
 type = stations.findall('Station/Type')
@@ -10,6 +13,7 @@ naamK = stations.findall('Station/Namen/Kort')
 land = stations.findall('Station/Land')
 syno = stations.findall('Station/Synoniemen/Synoniem')
 
+print(len(syno))
 
 '''
 print('Dit zijn de codes, types en landcodes van de 4 stations:')
@@ -18,14 +22,16 @@ for c, t, l in zip(code,type,land):
     print(s)
 '''
 
+
 testStr = ''
 print('\nDit zijn alle stations met een of meer synoniemen:')
-for c, sy in zip(code, syno):
-    if sy is not None:
-        testStr = testStr+sy.text
-        s = '{} - {}'.format(c.text,  testStr)
-    print(s)
-
+for c in code:
+    print(c.text, end=' - ')
+    tst = ''
+    for synoniem in syno:
+        if synoniem is not None:
+            tst = tst + synoniem.text + ' '
+            print(tst)
 
 
 '''

@@ -1,7 +1,7 @@
 import csv
 import random
 
-with open('kluizen.txt','r') as kluizen:
+with open('kluizen.csv','r') as kluizen:
     klReader = csv.reader(kluizen)
     kluizenLijst = []
     for line in klReader:
@@ -26,7 +26,7 @@ def newKl():
 
     print('geen vrije kluizen beschickbaar')
 
-    with open('kluizen.txt','w', newline='\n') as kluizen:
+    with open('kluizen.csv','w', newline='\n') as kluizen:
         kWriter = csv.writer(kluizen)
         kWriter.writerows(kluizenLijst)
 
@@ -48,7 +48,7 @@ def delKl(kluisNr,kluisCode):
         else:
             print('toegang geweigerd')
 
-    with open('kluizen.txt', 'w', newline='\n') as kluizen:
+    with open('kluizen.csv', 'w', newline='\n') as kluizen:
         kWriter = csv.writer(kluizen)
         kWriter.writerows(kluizenLijst)
 
@@ -68,7 +68,7 @@ def secret():
     print('reset')
     print(kluizenLijst)
 
-    with open('kluizen.txt', 'w', newline='\n') as kluizen:
+    with open('kluizen.csv', 'w', newline='\n') as kluizen:
         kWriter = csv.writer(kluizen)
         kWriter.writerows(kluizenLijst)
 
