@@ -18,7 +18,7 @@ def g(x):
 
 print(f(3)+g(3))
 
-
+# onderstaand staat de onverbeterde code te referentie
 '''
 def verdubbel(b):
     return b + b
