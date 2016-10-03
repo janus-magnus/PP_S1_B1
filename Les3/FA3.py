@@ -1,29 +1,26 @@
 def standaardtarief(km):
-    prijs = float(0)
     if km >= 0:
         if km > 50:
-            prijs = km * 0.60 + 15
+            standaard_prijs = km * 0.60 + 15
         else:
-            prijs = km * 0.60
+            standaard_prijs = km * 0.60
     else:
-        prijs = 0
-    return prijs
+        standaard_prijs = 0
+    return standaard_prijs
 
 def ritprijs(leeftijd,wkndRit,km):
-    prijs = standaardtarief(km)
+    rit_prijs = standaardtarief(km)
 
-   # if type(leeftijd) == int and type(wkndRit) == bool and type(km) == int:
     if leeftijd <= 12 or leeftijd >= 65:
         if wkndRit == True:
-            prijs -= (prijs / 100 * 35)
+            rit_prijs -= (rit_prijs / 100 * 35)
         else:
-            prijs -= (prijs / 100 * 30)
+            rit_prijs -= (rit_prijs / 100 * 30)
     elif wkndRit == True:
-        prijs -= (prijs / 100 * 40)
+        rit_prijs -= (rit_prijs / 100 * 40)
+    return rit_prijs
 
-
-    return prijs
-
+#testCases
 print(ritprijs(11,True,100))
 print(ritprijs(12,True,100))
 print(ritprijs(13,True,100))

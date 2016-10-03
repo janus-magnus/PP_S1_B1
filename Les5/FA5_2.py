@@ -5,7 +5,7 @@ stations = ['Schagen', 'Heerhugowaard', 'Alkmaar', 'Castricum', 'Zaandam', 'Amst
 
 def inlezen_beginpunt():
     while True:
-        beginStation = input('Wat is je beginstation?: ')
+        beginStation = input('Wat is je beginstation?: ').capitalize()
         if beginStation in stations:
             return beginStation
         else:
@@ -13,7 +13,7 @@ def inlezen_beginpunt():
 
 def inlezen_eindpunt(begin):
     while True:
-        eindStation = input('Wat is je eindstation?: ')
+        eindStation = input('Wat is je eindstation?: ').capitalize()
         if eindStation in stations:
             if stations.index(begin) < stations.index(eindStation):
                 return  eindStation

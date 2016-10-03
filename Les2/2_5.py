@@ -1,5 +1,5 @@
 s = 'Guido van Rossum heeft programmeertaal Python bedacht.'
 
-for kln in s:
-    if kln in "AEOIUaeoiu":
-        print(kln)
+for char in s:
+    if char in "AEOIUaeoiu":
+        print(char)

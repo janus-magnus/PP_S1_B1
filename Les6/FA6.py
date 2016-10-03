@@ -3,8 +3,6 @@ bstation = input('Voer beginstation in:')
 estation = input('Voer eindstation: ')
 codeinput = name+bstation+estation
 
-
-
 def code(invoerstring):
     code = ''
     for c in invoerstring:

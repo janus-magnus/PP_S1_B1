@@ -1,30 +1,22 @@
-
-
-
 def ticker(filename):
     tickerFile = open(filename, 'r')
-
-    quicklist = []
     tickerDict = {}
 
     for line in tickerFile:
-        quicklist = line.split(sep=':')
+        quicklist = line.split(sep=':')#de waardes van de line wordt hier tijdelijk opgeslagen in lijst
         tickerDict[quicklist[0].strip()] = quicklist[1].strip()
-
-    print(tickerDict)
+    print(tickerDict)# dit print statement de Dict in de console zodat de test makelijker uitvoerbaar is
     return tickerDict
 
 def search(dict):
-    bedrijfName = input('Voer bedrijfsnaam in: ').upper()
+    bedrijfName = input('Voer bedrijfsnaam in: ')
 
     print(dict[bedrijfName])
 
     bedrijfTick = input('Voer Ticker symbool in: ').upper()
 
     for k in dict.keys():
-        print(dict[k])
         if dict[k] == bedrijfTick:
             print(k)
-
 
 search(ticker('Ticker.txt'))

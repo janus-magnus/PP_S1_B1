@@ -1,5 +1,3 @@
-
-
 def maand(maandNum):
     maandInt = eval(maandNum)
     if maandInt >= 12 and maandInt <= 2:

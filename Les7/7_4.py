@@ -4,13 +4,10 @@ valueslist = [['Artikelnummer', 'Artikelcode', 'Naam', 'Voorraad', 'Prijs'],[121
               [123, 'PQR678', 'Nietmachine', 587, 9.99],[128, 'ZYX163', 'Bureaulamp', 34, 19.95],
               [137, 'MLK709', 'Monitorstandaard', 66, 32.50],[271, 'TRS665', 'Ipad hoes', 155, 19.01]]
 
-
-
 with open('article.csv', 'w',newline='\n') as atf:
     artklWriter = csv.writer(atf)
     artklWriter.writerows(valueslist)
     atf.close()
-
 
 with open('article.csv', 'r', newline='\n') as atf:
     artklReader = csv.reader(atf)
@@ -21,14 +18,11 @@ with open('article.csv', 'r', newline='\n') as atf:
         valuesInList.append(line)
 
     valuesInList.pop(0)
-
     minPrijs = 10000000
     minVoor = 100000000.0
     sumVoor = 0
 
     print(valuesInList)
-
-
 
     for artk in valuesInList:
         if minPrijs > eval(artk[4]):

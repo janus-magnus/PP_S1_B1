@@ -5,14 +5,14 @@ stations = ['Schagen', 'Heerhugowaard', 'Alkmaar', 'Castricum', 'Zaandam', 'Amst
 def station():
 
     while True:
-        beginStation = input('Wat is je beginstation?: ')
+        beginStation = input('Wat is je beginstation?: ').capitalize()
         if beginStation in stations:
             break
         else:
             print('Deze trein komt niet in {}'.format(beginStation))
 
     while True:
-        eindStation = input('Wat is je eindstation?: ')
+        eindStation = input('Wat is je eindstation?: ').capitalize()
         if eindStation in stations:
             break
         else:
@@ -32,6 +32,5 @@ def station():
         print('-' + str(stations[i]))
 
     print('Jij stapt uit op: {}'.format(eindStation))
-
 
 station()

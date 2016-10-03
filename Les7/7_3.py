@@ -1,14 +1,11 @@
 import csv
 
 with open('gamers.csv', 'r') as gamerFile:
-
     gfreader = csv.reader(gamerFile)
     gamerList = []
 
     for line in gfreader:
         gamerList.append(line[0].split(sep=';'))
-#        print(line)
-#       print(gamerList)
 
     print(len(gamerList))
     print(gamerList)

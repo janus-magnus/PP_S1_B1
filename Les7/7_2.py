@@ -15,7 +15,7 @@ while True:
     today = datetime.date.today().strftime('%d-%m-%y')
     now = datetime.datetime.now().time().strftime('%H:%M:%S')
 
-    datetimeStr = str(today)+' at '+str(now)
+    datetimeStr = '{} at {}'.format(today,now)
 
     with open('inloggers.csv','a', newline='\n') as infile:
         inlogWriter = csv.writer(infile, delimiter=';')

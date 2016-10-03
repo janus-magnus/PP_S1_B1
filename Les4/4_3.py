@@ -7,14 +7,12 @@ def fileReader():
         lineCounter+=1
         quickList = line.split(sep=', ')
         lineList.append(quickList[0])
-    print('Deze file telt ' + str(lineCounter) + ' regels')
+    print('Deze file telt {} regels'.format(lineCounter))
 
     maxNum = max(lineList)
-    maxLine = lineList.index(max(lineList))+1
-    print('het grootste kaartnummer is: '+str(maxNum)+' en dat staat op regel '+
-    str(maxLine))
+    maxNumLine = lineList.index(max(lineList))+1
+    print('het grootste kaartnummer is: {} en dat staat op regel {}'.format(maxNum,maxNumLine))
     file.close()
-
 
 fileReader()
 
